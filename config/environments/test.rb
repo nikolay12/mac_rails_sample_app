@@ -36,4 +36,7 @@ SampleApp::Application.configure do
 
   #Speed up tests by lowering bcrypt's cost
   ActiveModel::SecurePassword.min_cost = true
+  config.cache_store = :null_store
+  config.log_level = :debug
+  config.logger = Logger.new(STDOUT)
 end
